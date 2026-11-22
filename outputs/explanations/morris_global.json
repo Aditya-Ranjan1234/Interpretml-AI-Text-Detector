@@ -1,0 +1,23 @@
+{
+  "names": [
+    "char_count",
+    "word_count",
+    "avg_word_len",
+    "punct_count",
+    "sentence_count",
+    "avg_sentence_len",
+    "upper_case_count",
+    "title_case_count"
+  ],
+  "scores": [
+    0.10327499999999999,
+    0.13395000000000007,
+    0.3275999999999998,
+    0.09787500000000005,
+    0.07162499999999994,
+    0.042824999999999995,
+    0.04680000000000001,
+    0.07777499999999996
+  ],
+  "convergence_index": 0.2243835158347103
+}

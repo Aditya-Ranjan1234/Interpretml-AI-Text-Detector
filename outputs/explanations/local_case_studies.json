@@ -1,0 +1,542 @@
+[
+  {
+    "case": "correct_ai",
+    "metadata": {
+      "case": "correct_ai",
+      "record_index": 0,
+      "id": "00069210-e90e-4624-8620-f11e25491646",
+      "ground_truth": 1,
+      "predicted": 1,
+      "probabilities": {
+        "0": 0.1,
+        "1": 0.9
+      },
+      "features": {
+        "char_count": 1703.0,
+        "word_count": 226.0,
+        "avg_word_len": 6.522123893805309,
+        "punct_count": 22.0,
+        "sentence_count": 7.0,
+        "avg_sentence_len": 32.285714285714285,
+        "upper_case_count": 4.0,
+        "title_case_count": 21.0
+      },
+      "text_excerpt": "LONDON, UK - A parliamentary committee has called on the government to increase oversight and transparency of the licence fee funding awarded to BBC. In their report published today, MPs have argued that allowing greater external examination of the broadcaster's finances would enhance public trust in the organisation.\n\nThe Digital, Culture, Media and Sport Committee said it was essential for BBC to be held accountable to audiences as well as taxpayers who fund its activities. They also added tha"
+    },
+    "lime": {
+      "type": "univariate",
+      "names": [
+        "avg_word_len",
+        "avg_sentence_len",
+        "punct_count",
+        "char_count",
+        "title_case_count",
+        "word_count",
+        "sentence_count",
+        "upper_case_count"
+      ],
+      "perf": {
+        "is_classification": false,
+        "actual": 1,
+        "predicted": 0.9,
+        "actual_score": 1,
+        "predicted_score": 0.9
+      },
+      "scores": [
+        0.3899989601395115,
+        -0.14494132214253155,
+        -0.05287955267002699,
+        0.026868569131203838,
+        0.018836053699140678,
+        -0.015228219323109533,
+        0.005196377924857775,
+        0.00040518523243249433
+      ],
+      "values": [
+        6.522123893805309,
+        32.285714285714285,
+        22.0,
+        1703.0,
+        21.0,
+        226.0,
+        7.0,
+        4.0
+      ],
+      "extra": {
+        "names": [
+          "Intercept"
+        ],
+        "scores": [
+          0.44021704854915855
+        ],
+        "values": [
+          1
+        ]
+      }
+    },
+    "kernel_shap": {
+      "type": "univariate",
+      "names": [
+        "char_count",
+        "word_count",
+        "avg_word_len",
+        "punct_count",
+        "sentence_count",
+        "avg_sentence_len",
+        "upper_case_count",
+        "title_case_count"
+      ],
+      "perf": {
+        "is_classification": false,
+        "actual": 1,
+        "predicted": 0.9,
+        "actual_score": 1,
+        "predicted_score": 0.9
+      },
+      "scores": [
+        0.023198911564625873,
+        0.0,
+        0.425657006802721,
+        -0.02789013605442151,
+        0.0011151020408163292,
+        -0.06404632653061224,
+        -0.0019972789115647134,
+        0.008762721088435389
+      ],
+      "values": [
+        1703.0,
+        226.0,
+        6.522123893805309,
+        22.0,
+        7.0,
+        32.285714285714285,
+        4.0,
+        21.0
+      ],
+      "extra": {
+        "names": [
+          "Base Value"
+        ],
+        "scores": [
+          0.5351999999999999
+        ],
+        "values": [
+          1
+        ]
+      }
+    },
+    "stability_check": {
+      "lime_top3_jaccard": 1.0,
+      "lime_flagged_unstable": false,
+      "kernel_shap_top3_jaccard": 1.0,
+      "kernel_shap_flagged_unstable": false,
+      "interpretation": "Scores compare top-three named stylometric inputs across an alternate LIME seed and an independent SHAP sampling run. Unavailable means the explanation schema did not expose a feature-aligned score list."
+    },
+    "interpretation": "LIME ranked ['avg_word_len', 'avg_sentence_len', 'punct_count'] highest and Kernel SHAP ranked ['avg_word_len', 'avg_sentence_len', 'punct_count'] highest among the numerical inputs when these scores could be aligned. These are local approximations of the detector's response, not causes, and they do not identify words or text spans."
+  },
+  {
+    "case": "correct_human",
+    "metadata": {
+      "case": "correct_human",
+      "record_index": 4,
+      "id": "00208047-5738-4dac-a2f4-36998372d329",
+      "ground_truth": 0,
+      "predicted": 0,
+      "probabilities": {
+        "0": 0.59,
+        "1": 0.41
+      },
+      "features": {
+        "char_count": 1282.0,
+        "word_count": 212.0,
+        "avg_word_len": 5.047169811320755,
+        "punct_count": 40.0,
+        "sentence_count": 11.0,
+        "avg_sentence_len": 19.272727272727273,
+        "upper_case_count": 0.0,
+        "title_case_count": 40.0
+      },
+      "text_excerpt": " \u03a4h\u0435 b\u043e\u043ek f\u043ell\u043ews th\u0435 l\u0456f\u0435 \u043ef \u039aw\u0430ng \u041c\u0435ng, \u0430 \u0443\u043eung, 18-\u0443\u0435\u0430r-\u043eld w\u043erk\u0456ng \u0430dult wh\u043e h\u0430s just gr\u0430du\u0430t\u0435d fr\u043em s\u0435\u0441\u043end\u0430r\u0443 s\u0441h\u043e\u043el. \u0397\u0435 \u0441urr\u0435ntl\u0443 w\u043erks \u0430s \u0430 \u0441l\u0435rk, \u0430 j\u043eb wh\u0456\u0441h h\u0435 f\u0456nds dr\u0430b \u0430nd m\u043en\u043et\u043en\u043eus. \u03a4w\u043e \u043ef h\u0456s s\u0435\u0441\u043end\u0430r\u0443 s\u0441h\u043e\u043el fr\u0456\u0435nds, \u041d\u043e\u0441k L\u0430\u0456 \u0430nd \u039d\u0430d\u0430r\u0430j\u0430h (n\u0456\u0441kn\u0430m\u0435d \u03a1\u043ert\u0456\u0430), f\u043ell\u043ew d\u0456ff\u0435r\u0435nt \u0441\u0430r\u0435\u0435r \u0440\u0430ths \u0456n th\u0435\u0456r d\u0456v\u0435rg\u0456ng l\u0456v\u0435s. \u041d\u043e\u0441k L\u0430\u0456 b\u0435\u0441\u043em\u0435s \u0430 wh\u0456t\u0435-\u0441\u043ell\u0430r\u0435d w\u043erk\u0435r, d\u0435t\u0435rm\u0456n\u0435d t\u043e \u0441l\u0456mb th\u0435 \u0441\u043er\u0440\u043er\u0430t\u0435 l\u0430dd\u0435r, wh\u0456l\u0435 \u0420\u043ert\u0456\u0430 \u0456nt\u0435nds t\u043e furth\u0435r h\u0456s stud\u0456\u0435s \u0456n th\u0435 U\u039a. \u039aw\u0430ng \u039c\u0435ng m\u0435\u0435ts \u0430nd str\u0456k\u0435s "
+    },
+    "lime": {
+      "type": "univariate",
+      "names": [
+        "avg_sentence_len",
+        "punct_count",
+        "word_count",
+        "sentence_count",
+        "char_count",
+        "title_case_count",
+        "avg_word_len",
+        "upper_case_count"
+      ],
+      "perf": {
+        "is_classification": false,
+        "actual": 0,
+        "predicted": 0.41,
+        "actual_score": 0,
+        "predicted_score": 0.41
+      },
+      "scores": [
+        0.03549204820141642,
+        -0.02333018407644179,
+        -0.019245396601075698,
+        -0.01894813797544724,
+        -0.01460051374415301,
+        -0.014315868683094746,
+        0.004190389509136264,
+        0.0014359610822739562
+      ],
+      "values": [
+        19.272727272727273,
+        40.0,
+        212.0,
+        11.0,
+        1282.0,
+        40.0,
+        5.047169811320755,
+        0.0
+      ],
+      "extra": {
+        "names": [
+          "Intercept"
+        ],
+        "scores": [
+          0.5094868548574013
+        ],
+        "values": [
+          1
+        ]
+      }
+    },
+    "kernel_shap": {
+      "type": "univariate",
+      "names": [
+        "char_count",
+        "word_count",
+        "avg_word_len",
+        "punct_count",
+        "sentence_count",
+        "avg_sentence_len",
+        "upper_case_count",
+        "title_case_count"
+      ],
+      "perf": {
+        "is_classification": false,
+        "actual": 0,
+        "predicted": 0.41,
+        "actual_score": 0,
+        "predicted_score": 0.41
+      },
+      "scores": [
+        -0.0348335714285714,
+        -0.03135261904761904,
+        0.02419452380952379,
+        -0.06296119047619048,
+        -0.01630595238095234,
+        0.03172357142857141,
+        0.015255476190476236,
+        -0.0509202380952381
+      ],
+      "values": [
+        1282.0,
+        212.0,
+        5.047169811320755,
+        40.0,
+        11.0,
+        19.272727272727273,
+        0.0,
+        40.0
+      ],
+      "extra": {
+        "names": [
+          "Base Value"
+        ],
+        "scores": [
+          0.5351999999999999
+        ],
+        "values": [
+          1
+        ]
+      }
+    },
+    "stability_check": {
+      "lime_top3_jaccard": 1.0,
+      "lime_flagged_unstable": false,
+      "kernel_shap_top3_jaccard": 1.0,
+      "kernel_shap_flagged_unstable": false,
+      "interpretation": "Scores compare top-three named stylometric inputs across an alternate LIME seed and an independent SHAP sampling run. Unavailable means the explanation schema did not expose a feature-aligned score list."
+    },
+    "interpretation": "LIME ranked ['avg_sentence_len', 'punct_count', 'word_count'] highest and Kernel SHAP ranked ['punct_count', 'title_case_count', 'char_count'] highest among the numerical inputs when these scores could be aligned. These are local approximations of the detector's response, not causes, and they do not identify words or text spans."
+  },
+  {
+    "case": "human_misclassified_as_ai",
+    "metadata": {
+      "case": "human_misclassified_as_ai",
+      "record_index": 2,
+      "id": "0007f3bd-fd77-4e8a-95a5-96a49a614a2f",
+      "ground_truth": 0,
+      "predicted": 1,
+      "probabilities": {
+        "0": 0.38,
+        "1": 0.62
+      },
+      "features": {
+        "char_count": 1278.0,
+        "word_count": 207.0,
+        "avg_word_len": 5.173913043478261,
+        "punct_count": 42.0,
+        "sentence_count": 9.0,
+        "avg_sentence_len": 23.0,
+        "upper_case_count": 0.0,
+        "title_case_count": 25.0
+      },
+      "text_excerpt": " An eight-man construction crew is building an airstrip and related Facilities on a small pacific island during the course of World War II. They uncover and break open an ancient stone \"temple.\" This releases an ancient being composed of pure energy, leftover from a war involving sentient machines in a long-lost civilization, which \"possesses\" a bulldozer being used By the construction crew. The being's Purpose was to take over The \"enemy's\" machines and attack them. When released from The ancie"
+    },
+    "lime": {
+      "type": "univariate",
+      "names": [
+        "punct_count",
+        "avg_sentence_len",
+        "word_count",
+        "sentence_count",
+        "char_count",
+        "title_case_count",
+        "avg_word_len",
+        "upper_case_count"
+      ],
+      "perf": {
+        "is_classification": false,
+        "actual": 0,
+        "predicted": 0.62,
+        "actual_score": 0,
+        "predicted_score": 0.62
+      },
+      "scores": [
+        -0.048830765779437756,
+        0.04326529772992551,
+        -0.027707448397595168,
+        0.024153337792162364,
+        -0.023021883370111202,
+        -0.02218719207426554,
+        0.004287984951087278,
+        0.003889796754084512
+      ],
+      "values": [
+        42.0,
+        23.0,
+        207.0,
+        9.0,
+        1278.0,
+        25.0,
+        5.173913043478261,
+        0.0
+      ],
+      "extra": {
+        "names": [
+          "Intercept"
+        ],
+        "scores": [
+          0.5113023242870719
+        ],
+        "values": [
+          1
+        ]
+      }
+    },
+    "kernel_shap": {
+      "type": "univariate",
+      "names": [
+        "char_count",
+        "word_count",
+        "avg_word_len",
+        "punct_count",
+        "sentence_count",
+        "avg_sentence_len",
+        "upper_case_count",
+        "title_case_count"
+      ],
+      "perf": {
+        "is_classification": false,
+        "actual": 0,
+        "predicted": 0.62,
+        "actual_score": 0,
+        "predicted_score": 0.62
+      },
+      "scores": [
+        -0.021695238095238142,
+        -0.02837142857142859,
+        0.14465428571428576,
+        -0.07368619047619043,
+        -0.0015576190476189883,
+        0.02552809523809528,
+        0.02655428571428567,
+        0.013373809523809538
+      ],
+      "values": [
+        1278.0,
+        207.0,
+        5.173913043478261,
+        42.0,
+        9.0,
+        23.0,
+        0.0,
+        25.0
+      ],
+      "extra": {
+        "names": [
+          "Base Value"
+        ],
+        "scores": [
+          0.5351999999999999
+        ],
+        "values": [
+          1
+        ]
+      }
+    },
+    "stability_check": {
+      "lime_top3_jaccard": 1.0,
+      "lime_flagged_unstable": false,
+      "kernel_shap_top3_jaccard": 1.0,
+      "kernel_shap_flagged_unstable": false,
+      "interpretation": "Scores compare top-three named stylometric inputs across an alternate LIME seed and an independent SHAP sampling run. Unavailable means the explanation schema did not expose a feature-aligned score list."
+    },
+    "interpretation": "LIME ranked ['punct_count', 'avg_sentence_len', 'word_count'] highest and Kernel SHAP ranked ['avg_word_len', 'punct_count', 'word_count'] highest among the numerical inputs when these scores could be aligned. These are local approximations of the detector's response, not causes, and they do not identify words or text spans."
+  },
+  {
+    "case": "ai_misclassified_as_human",
+    "metadata": {
+      "case": "ai_misclassified_as_human",
+      "record_index": 1,
+      "id": "00079764-2ea4-4ac4-acb1-a1cd557b048e",
+      "ground_truth": 1,
+      "predicted": 0,
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "features": {
+        "char_count": 2162.0,
+        "word_count": 464.0,
+        "avg_word_len": 3.6616379310344827,
+        "punct_count": 1.0,
+        "sentence_count": 2.0,
+        "avg_sentence_len": 232.0,
+        "upper_case_count": 3.0,
+        "title_case_count": 3.0
+      },
+      "text_excerpt": "I have been playing beat saber for while now and I have been trying to get better at it. I have been trying to get better at it by playing game and trying to get better at it by playing game and trying to get better at it by playing the game and trying to get better at it by playing game and trying to get better at it by playing game and trying to get better at it by playing the game and trying to get better at it by playing game and trying to get better at it by playing game and trying to get b"
+    },
+    "lime": {
+      "type": "univariate",
+      "names": [
+        "avg_word_len",
+        "avg_sentence_len",
+        "word_count",
+        "punct_count",
+        "char_count",
+        "title_case_count",
+        "sentence_count",
+        "upper_case_count"
+      ],
+      "perf": {
+        "is_classification": false,
+        "actual": 1,
+        "predicted": 0.0,
+        "actual_score": 1,
+        "predicted_score": 0.0
+      },
+      "scores": [
+        -0.27126505078565916,
+        -0.13835604740383703,
+        -0.10751258709430019,
+        -0.05587910660927983,
+        -0.05056245566584382,
+        0.020245281554544685,
+        0.01803200369465883,
+        0.002409935334038567
+      ],
+      "values": [
+        3.6616379310344827,
+        232.0,
+        464.0,
+        1.0,
+        2162.0,
+        3.0,
+        2.0,
+        3.0
+      ],
+      "extra": {
+        "names": [
+          "Intercept"
+        ],
+        "scores": [
+          0.6488743411640316
+        ],
+        "values": [
+          1
+        ]
+      }
+    },
+    "kernel_shap": {
+      "type": "univariate",
+      "names": [
+        "char_count",
+        "word_count",
+        "avg_word_len",
+        "punct_count",
+        "sentence_count",
+        "avg_sentence_len",
+        "upper_case_count",
+        "title_case_count"
+      ],
+      "perf": {
+        "is_classification": false,
+        "actual": 1,
+        "predicted": 0.0,
+        "actual_score": 1,
+        "predicted_score": 0.0
+      },
+      "scores": [
+        -0.009652857142857041,
+        -0.09847428571428579,
+        -0.22646857142857169,
+        -0.05118666666666666,
+        -0.006198095238095239,
+        -0.13661476190476182,
+        0.0009971428571428076,
+        -0.007601904761904513
+      ],
+      "values": [
+        2162.0,
+        464.0,
+        3.6616379310344827,
+        1.0,
+        2.0,
+        232.0,
+        3.0,
+        3.0
+      ],
+      "extra": {
+        "names": [
+          "Base Value"
+        ],
+        "scores": [
+          0.5351999999999999
+        ],
+        "values": [
+          1
+        ]
+      }
+    },
+    "stability_check": {
+      "lime_top3_jaccard": 1.0,
+      "lime_flagged_unstable": false,
+      "kernel_shap_top3_jaccard": 1.0,
+      "kernel_shap_flagged_unstable": false,
+      "interpretation": "Scores compare top-three named stylometric inputs across an alternate LIME seed and an independent SHAP sampling run. Unavailable means the explanation schema did not expose a feature-aligned score list."
+    },
+    "interpretation": "LIME ranked ['avg_word_len', 'avg_sentence_len', 'word_count'] highest and Kernel SHAP ranked ['avg_word_len', 'avg_sentence_len', 'word_count'] highest among the numerical inputs when these scores could be aligned. These are local approximations of the detector's response, not causes, and they do not identify words or text spans."
+  }
+]
