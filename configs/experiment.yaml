@@ -27,6 +27,7 @@ explainability:
   lime_num_samples: 3000
   shap_background_records: 50
   shap_nsamples: 256
+  morris_trajectories: 200
   partial_dependence_points: 10
   morris_num_levels: 4
 

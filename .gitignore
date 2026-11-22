@@ -4,3 +4,5 @@ __pycache__/
 .venv/
 models/cache/
 data/raid_cache/
+data/sampled_records.jsonl
+data/sample_metadata.json
