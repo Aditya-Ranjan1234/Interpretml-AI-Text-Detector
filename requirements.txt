@@ -1,0 +1,17 @@
+# Python 3.11 (Google Colab CPU)
+datasets==3.3.2
+huggingface-hub==0.29.3
+interpret==0.6.10
+joblib==1.4.2
+matplotlib==3.10.1
+nbconvert==7.16.6
+numpy==1.26.4
+pandas==2.2.3
+pyarrow==19.0.1
+scikit-learn==1.6.1
+scipy==1.15.2
+shap==0.47.1
+lime==0.2.0.1
+PyYAML==6.0.2
+SALib==1.5.1
+tqdm==4.67.1

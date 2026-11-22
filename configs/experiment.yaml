@@ -1,0 +1,35 @@
+model:
+  repo_id: dinisds/stylometric-ai-detector
+  revision: de4e8a8099533b6af8a46f004d5966a7594b14a6
+  filename: random_forest_stylometric_model.joblib
+  sha256: 386cfbd171eeae2f532f86f34b170644f32d59cdd9daa18b7144179a5347b57c
+  allow_pickle_env_var: ALLOW_PICKLE_MODEL
+  required_pickle_opt_in: "1"
+
+dataset:
+  repo_id: liamdugan/raid
+  revision: 865cac74188466cb0c3b7574a10204007b57a459
+  config: raid
+  split: train
+  text_column: generation
+  label_column: model
+  human_value: human
+  # The published train split contains the English RAID genres. RAID extra
+  # contains code/Czech/German and test is unlabeled; neither is sampled.
+  english_domains: [abstracts, books, news, poetry, recipes, reddit, reviews, wiki]
+  sample_per_class: 5000
+  seed: 42
+
+explainability:
+  seed: 42
+  compatibility_records: 12
+  global_sample_records: 500
+  lime_num_samples: 3000
+  shap_background_records: 50
+  shap_nsamples: 256
+  partial_dependence_points: 10
+  morris_num_levels: 4
+
+outputs:
+  root: outputs
+  manifest: data/sampled_record_ids.csv
