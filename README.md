@@ -31,6 +31,10 @@ The notebook pins RAID to its published dataset revision and streams the labeled
 
 This is an independent source from the model card's stated Kaggle training dataset. RAID source overlap cannot be fully ruled out from the published identifiers; the notebook preserves `source_id`, `adv_source_id`, domain, generator, attack, decoding, and repetition metadata to support audit. RAID labels do not change model parameters or thresholds.
 
+## Formal academic report
+
+The formal report is available in [PDF](academic_report/report.pdf), [HTML](academic_report/report.html), and [LaTeX source](academic_report/main.tex). The [25-paper literature survey](academic_report/literature_survey.md) is also included as a standalone Markdown report. The report uses the supplied RVCE template assets; administrative student/course/guide details are marked “Not provided” until supplied.
+
 ## Outputs
 
 Run the notebook to populate:
