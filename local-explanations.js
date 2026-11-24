@@ -276,6 +276,16 @@ async function mountAudit() {
   errorPanel.className = 'card';
   while (errorHeading.nextElementSibling) errorPanel.append(errorHeading.nextElementSibling);
   errorHeading.remove();
+  panel.classList.add('calibration-layout');
+  const headings = [...panel.querySelectorAll('h3')];
+  headings.forEach(heading => {
+    const column = document.createElement('section');
+    heading.before(column);
+    column.append(heading);
+    while (column.nextElementSibling && column.nextElementSibling.tagName !== 'H3') {
+      column.append(column.nextElementSibling);
+    }
+  });
   sections[0].status.replaceWith(panel);
   sections[1].status.replaceWith(errorPanel);
   const slices = document.createElement('section');
