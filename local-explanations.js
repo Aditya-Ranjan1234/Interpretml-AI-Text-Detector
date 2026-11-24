@@ -111,7 +111,6 @@ async function mountGlobalEvidence() {
       const y = score => 205 - score * 175;
       const points = curve.names.map((value, i) => [x(value), y(curve.scores[i])]);
       container.querySelector('.pdp-chart').innerHTML = `
-        <p>Observed range in the PDP sample: ${min.toFixed(2)} to ${max.toFixed(2)}</p>
         <svg viewBox="0 0 640 245" width="100%" aria-label="Partial dependence plot">
           <text x="64" y="18" font-size="12">Mean AI probability</text>
           ${[0, .25, .5, .75, 1].map(tick => `<text x="20" y="${y(tick)+4}" font-size="12">${tick}</text><path d="M64 ${y(tick)}H594" stroke="#d8d8ce"/>`).join('')}
@@ -119,20 +118,13 @@ async function mountGlobalEvidence() {
           ${points.map(([cx, cy], i) => `<circle tabindex="0" cx="${cx}" cy="${cy}" r="6" fill="#178b83" data-index="${i}"><title>${curve.names[i].toFixed(2)} · ${(100 * curve.scores[i]).toFixed(1)}%</title></circle>`).join('')}
           <text x="64" y="231" font-size="12">${select.selectedOptions[0].text}</text>
         </svg>
-        <p role="status">Hover or focus a curve point for its recorded score.</p>
-        <label>Check a feature value <input type="number" step="any"></label><p class="range-message" aria-live="polite"></p>`;
+        <p role="status">Hover or focus a curve point for its recorded score.</p>`;
       const chart = container.querySelector('.pdp-chart');
       chart.querySelectorAll('circle').forEach(dot => {
         const show = () => { chart.querySelector('[role=status]').textContent = dot.textContent; };
         dot.addEventListener('focus', show);
         dot.addEventListener('pointerenter', show);
       });
-      chart.querySelector('input').oninput = event => {
-        const {value, valueAsNumber} = event.target;
-        chart.querySelector('.range-message').textContent = !value ? '' :
-          valueAsNumber < min || valueAsNumber > max ? 'Outside the observed range. The plot provides no estimate here.' :
-          'Within the observed range. Focus a plotted point to read its recorded score.';
-      };
     }
     select.onchange = render;
     render();
@@ -167,6 +159,7 @@ async function mountCorrelation() {
   caption.textContent = `Each cell shows Pearson r across ${data.n} RAID rows used for partial dependence. Compare ${pair('char_count', 'word_count')}, ${pair('word_count', 'sentence_count')}, and ${pair('word_count', 'avg_sentence_len')}. Values near ±1 indicate a strong linear relationship. These coefficients describe the inputs; model sensitivity is measured on the Morris slide.`;
   figure.append(image, caption);
   slide.querySelector('.grid').before(figure);
+  slide.classList.add('correlation-layout');
 }
 
 mountCorrelation().catch(error => console.error('Correlation heatmap unavailable', error));
@@ -420,3 +413,17 @@ async function mountRecordedPerturbations() {
 }
 
 mountRecordedPerturbations().catch(error => console.error('Perturbations unavailable', error));
+
+const originalSlides = [...document.querySelectorAll('.page')];
+function stackSlide(target, source) {
+  const section = document.createElement('section');
+  section.className = 'stacked-section';
+  source.querySelector('.eyebrow')?.remove();
+  section.append(...source.childNodes);
+  target.append(section);
+  source.remove();
+}
+stackSlide(originalSlides[11], originalSlides[12]);
+stackSlide(originalSlides[11], originalSlides[13]);
+stackSlide(originalSlides[15], originalSlides[17]);
+show(cur);

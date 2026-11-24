@@ -16,7 +16,7 @@ def main():
         page.on("pageerror", lambda error: errors.append(str(error)))
         page.goto("http://127.0.0.1:8765/")
         active = page.locator(".page.active")
-        expect(page.locator("#chapter")).to_have_text("01 / 18")
+        expect(page.locator("#chapter")).to_have_text("01 / 15")
         for count in (13, 12):
             page.keyboard.press("ArrowRight")
             expect(active.locator("details a")).to_have_count(count)
@@ -34,8 +34,7 @@ def main():
         active.locator("select").select_option("2")
         active.locator("circle").first.focus()
         expect(active.get_by_role("status")).to_contain_text("%")
-        active.locator("input").fill("1000000")
-        expect(active.locator(".range-message")).to_contain_text("Outside")
+        expect(active.locator(".pdp-chart input")).to_have_count(0)
         page.locator("#nextBtn").click()
         page.locator("#nextBtn").click()
         active.locator("select").select_option("2")
@@ -47,7 +46,7 @@ def main():
         active.locator("select").last.select_option("avg_word_len")
         expect(active.locator("tbody tr")).to_have_count(4)
         if args.audit:
-            for _ in range(5):
+            for _ in range(3):
                 page.locator("#nextBtn").click()
             expect(active.get_by_text("Brier score")).to_be_visible()
             slider = active.locator('input[type="range"]')

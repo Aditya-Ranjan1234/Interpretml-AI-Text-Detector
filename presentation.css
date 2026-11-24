@@ -51,3 +51,18 @@
   .calibration-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .calibration-layout > :last-child { grid-column: 1 / -1; }
 }
+.stacked-section { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); }
+#pages .stacked-section h2 { font-size: clamp(19px, 3vh, 30px); }
+#pages .stacked-section .grid { margin-top: 6px; }
+#pages .stacked-section .card p { margin-bottom: 0; }
+@media (min-width: 850px) {
+  #pages .correlation-layout.active {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    column-gap: 20px;
+    align-content: start;
+  }
+  #pages .correlation-layout > figure { grid-column: 1; margin: 0; }
+  #pages .correlation-layout > .grid { grid-column: 2; grid-template-columns: 1fr; align-content: start; }
+  #pages .correlation-layout > .cite { grid-column: 1 / -1; margin: 0; }
+}
