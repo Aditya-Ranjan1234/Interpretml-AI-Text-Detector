@@ -1,0 +1,16 @@
+.page > .card, .page > figure { margin: 1.75rem 0; }
+.page > details { border-bottom: 1px solid var(--line); padding: .85rem 0; }
+.page details summary { cursor: pointer; font-weight: 650; line-height: 1.5; }
+.page details p { max-width: 75ch; line-height: 1.6; }
+.page details a { display: inline-block; margin-bottom: .75rem; }
+.page select { margin: .25rem .75rem .5rem .25rem; max-width: 100%; padding: .45rem; }
+.page .card { overflow-x: auto; }
+.page [role="status"] { min-height: 1.5em; }
+.page svg { fill: currentColor; }
+.page .bar { min-width: 0; }
+@media (max-width: 480px) {
+  .page .card { padding: 15px; }
+  .page .bar-row { grid-template-columns: minmax(0, 1fr) minmax(45px, 1fr) auto; }
+  .page .bar-row span { overflow-wrap: anywhere; }
+  .page th, .page td { padding: 8px 5px; }
+}
